@@ -27,6 +27,8 @@ app.use((req, res, next) => {
   }
 });
 
+app.use(express.static("pages"));
+
 app.use("/api/v1", headlineRoutes);
 
 app.listen(PORT, () => console.log(`---> Server is connected on ${PORT} <---`));
